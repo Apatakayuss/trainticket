@@ -1,64 +1,30 @@
 import React from 'react'
-import styled from 'styled-components'
-import BTN from '../Components/UI/Button'
+import '../Components/styles/Nav.css'
+import BTN from './UI/Button'
 
 const Nav = () => {
   return (
-    <Universal>
-        <NavContainer>
-        <Left>
-            Logo
-        </Left>
-        <Middle>
-            <UL>
-                <LI><a href="">Text</a></LI>
-                <LI><a href="">Text</a></LI>
-                <LI><a href="">Text</a></LI>
-                <LI><a href="">Text</a></LI>
-            </UL>
-        </Middle>
-        <Right>
-            <BTN var='base'>
-                Book Now
-            </BTN>
-           
-        </Right>
-    </NavContainer>
-    </Universal>
-
+    <div className='nav-container'>Nav
+        <div className="nav-card">
+            <div className="logo">
+                <p>LOGO</p>
+            </div>
+            <div className="nav-links">
+                <ul>
+                    <li><a href="/">Navlink</a></li>
+                    <li><a href="/">Navlink</a></li>
+                    <li><a href="/">Navlink</a></li>
+                    <li><a href="/">Text</a></li>
+                </ul>
+            </div>
+            <div className="nav-btn">
+                <BTN>
+                    Book Now
+                </BTN>
+            </div>
+        </div>
+    </div>
   )
 }
 
 export default Nav
-const Universal = styled.div`
-background-color: antiquewhite;
-`
-const NavContainer = styled.div`
-width: 90%;
-height: 80px;
-display: flex;
-justify-content: space-between;
-margin: auto;
-align-items: center;
-background-color: lavender;
-`
-const Left = styled.div``
-const Middle = styled.div``
-const Right = styled.div``
-const UL = styled.ul`
-    display: flex;
-    gap: 50px;
-    font-size: 16px;
-    font-weight: 600;
-`
-const LI = styled.li`
-    list-style-type: none;
-    &::after{
-        content: '';
-        width: 100%;
-        position: absolute;
-        bottom: 4px;
-        background-color: yellow;
-        height: 2px solid;
-    }
-`
