@@ -89,8 +89,7 @@
 
 // export default Book
 
-
-import React, { useState } from 'react';
+import React, { useState, startTransition } from 'react';
 import '../Components/styles/Book.css';
 import { Link } from 'react-router-dom';
 // import { GiWaterRecycling } from 'react-icons/gi';
@@ -103,10 +102,17 @@ const Book = () => {
   const [passengerCount, setPassengerCount] = useState(1);
 
   const handleSearch = () => {
-    console.log(`Searching for trains from ${departure} to ${destination}`);
-    console.log(`Departure Date: ${departureDate}, Arrival Date: ${arrivalDate}`);
-    console.log(`Number of Passengers: ${passengerCount}`);
+    startTransition(() => {
+      console.log(`Searching for trains from ${departure} to ${destination}`);
+      console.log(`Departure Date: ${departureDate}, Arrival Date: ${arrivalDate}`);
+      console.log(`Number of Passengers: ${passengerCount}`);
+    });
   };
+  
+
+
+
+
 
   return (
     <div>
@@ -187,11 +193,13 @@ const Book = () => {
           </div>
         </div>
 
-          <Link to='/Confirmation'>
-        <button type="button" onClick={handleSearch}>
-          Search for Train
-        </button>
+        <div className="btn-wrapper">
+        <Link to="/Confirmation">
+          <button type="submit" onClick={handleSearch}>
+            Search for Train
+          </button>
         </Link>
+        </div>
       </form>
     </div>
   );
