@@ -120,7 +120,7 @@ const Book = () => {
         <h2>Travel route</h2>
 
         <div className='input-div'>
-          <div>
+          <div className='book-div'>
             <label htmlFor="departure">Departure</label>
             <input
               type=""
@@ -135,7 +135,7 @@ const Book = () => {
             <GiWaterRecycling />
           </button> */}
 
-          <div>
+          <div className='book-div'>
             <label htmlFor="destination">Destination</label>
             <input
               type="text"
@@ -148,7 +148,7 @@ const Book = () => {
         </div>
 
         <div className='input-div'>
-          <div>
+          <div className='book-div'>
             <label htmlFor="departureDate">Departure date</label>
             <input
               type="date"
@@ -158,7 +158,7 @@ const Book = () => {
             />
           </div>
 
-          <div>
+          <div className='book-div'>
             <label htmlFor="arrivalDate">Arrival date</label>
             <input
               type="date"
@@ -170,7 +170,7 @@ const Book = () => {
         </div>
 
         <div className='input-div' style={{ width: 'fit-content' }}>
-          <div>
+          <div className='book-div'>
             <label htmlFor="passengerCount">Passenger</label>
             <input
               type="number"
@@ -181,7 +181,7 @@ const Book = () => {
             />
           </div>
 
-          <div>
+          <div className='book-div'>
             <label htmlFor="passengerCount">Passenger</label>
             <input
               type="number"
@@ -196,7 +196,7 @@ const Book = () => {
         <div className="btn-wrapper">
         <Link to="/Confirmation">
           <button type="submit" onClick={handleSearch}>
-            Search for Train
+            Confirm booking
           </button>
         </Link>
         </div>

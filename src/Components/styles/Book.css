@@ -5,6 +5,9 @@ form{
     /* background-color: antiquewhite; */
     width: fit-content;
     background-color: rgba(33, 31, 31, 0.752);
+    @media (max-width: 768px){
+        background-color: inherit;
+    }
 }
 label{
     display: block;
@@ -17,6 +20,11 @@ label{
     margin-top: 15px;
     width: fit-content;
     overflow: hidden;
+    @media (max-width: 768px){
+        flex-direction:column;
+        width: fit-content;
+        overflow-x: hidden;
+    }
 }
 input{
     width: 200px;

@@ -3,7 +3,7 @@ import './App.css';
 import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 const Hero = lazy(() => import('./Components/Hero'));
-const Confirmation = lazy(() => import('./Components/Confirmation'));
+const Confirmation = lazy(() => import('./Pages/Confirmation'));
 // import Nav from './Components/Nav'
 
 function App() {
